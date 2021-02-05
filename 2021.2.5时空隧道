@@ -17,7 +17,7 @@
             perspective: 40px;
             animation: b 10s infinite ease-in-out;
         }
-        .b{
+        .b{ 
             width: 600px;
             height: 600px;
             transform: rotate(30deg) translateY(calc(var(--i)*50px)) translateZ(calc(var(--i)*-14px));
