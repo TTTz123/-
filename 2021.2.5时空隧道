@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳山羊/时空隧道</title>
+    <style>
+        body{
+            background-color: rgb(60,60,70);
+        }
+        .a{
+            position: relative;
+            top: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 40px;
+            animation: b 10s infinite ease-in-out;
+        }
+        .b{
+            width: 600px;
+            height: 600px;
+            transform: rotate(30deg) translateY(calc(var(--i)*50px)) translateZ(calc(var(--i)*-14px));
+            /* brightness是亮度 contrast是对比度 */
+            filter: brightness(1) contrast(2);
+            border-radius: 50px;
+            position: absolute;
+            border: 15px #fff solid;
+            perspective: 100px;
+            /* inset是将外边框转内边框 */
+            box-shadow: 0 0 20px rgb(80,170,230),
+            inset 0 0 20px rgb(80,170,230),
+            0 0 80px #e0f,
+            0 0 20px #e0f;
+            opacity: calc(var(--x)*.05);
+            animation: b 10s infinite ease-in-out;
+        }
+        /* 设置颜色的变换 */
+        @keyframes a{
+            0%,100%{
+                filter: brightness(2) contrast(4);
+            }
+            50%{
+                filter: brightness(1) contrast(2);
+            }
+        }
+        /* 用透视的方法设置视觉冲击的效果 */
+        @keyframes b{
+            0%,100%{
+                perspective: 40px;
+            }
+            50%{
+                perspective: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <!-- --i是设置偏移量的，--x则是用来设置透明度（--x的值是不规则的） -->
+        <div class="b" style="--i:1;--x:20"></div>
+        <div class="b" style="--i:2;--x:18"></div>
+        <div class="b" style="--i:3;--x:17"></div>
+        <div class="b" style="--i:4;--x:16"></div>
+        <div class="b" style="--i:5;--x:15"></div>
+        <div class="b" style="--i:6;--x:14"></div>
+        <div class="b" style="--i:7;--x:13"></div>
+        <div class="b" style="--i:8;--x:12"></div>
+        <div class="b" style="--i:9;--x:10"></div>
+        <div class="b" style="--i:10;--x:8"></div>
+        <div class="b" style="--i:11;--x:6"></div>
+        <div class="b" style="--i:12;--x:4"></div>
+        <div class="b" style="--i:13;--x:2"></div>
+        <div class="b" style="--i:14;--x:1"></div>
+    </div>
+</body>
+</html>
