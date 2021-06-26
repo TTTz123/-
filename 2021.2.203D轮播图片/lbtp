@@ -22,7 +22,7 @@
             height: 250px;
             position: absolute;
             transform-style: preserve-3d;
-            /* animation: a 8s infinite cubic-bezier(.7,0,.17,1); */
+            animation: a 8s infinite cubic-bezier(.7,0,.17,1);
         }
         .b div{
             position: absolute;
